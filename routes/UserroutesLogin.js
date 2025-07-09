@@ -1,0 +1,12 @@
+const express=require('express')
+const router=express.Router()
+const {createUser ,getAllUsers,updateUser,deleteUser,loginUser,getUsersByRole,getUsersByBranch,getUserById,createMainAdmin }=require('../controllers/Usercontrollerlogin')
+router.post('/createUser',createUser )
+router.get('/getAllUsers',getAllUsers )
+router.get('/getUserById/:id',getUserById )
+router.put('/updateUser/:id',updateUser )
+router.delete('/deleteUser/:id',deleteUser )
+router.post('/loginuser/login',loginUser )
+router.get('/getUsersByRole/role/:role',getUsersByRole )
+router.get('/getUsersByBranch/branch/:branchId',getUsersByBranch )
+module.exports=router

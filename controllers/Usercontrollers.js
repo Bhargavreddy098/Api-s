@@ -87,7 +87,7 @@ const getallusers=async(req,res)=>{
 const updateuser=async(req,res)=>{
     try {
         const updateuser=await User.findByIdAndUpdate(req.params.id,req.body,{new:true})
-        if(!updateuser) return res.status(200).json({message:"user not found"})
+        if(!updateuser) return res.status(404).json({message:"user not found"})
             res.status(200).json({message:'user updated',user:updateuser})
     } catch (error) {
         res.status(500).json({message:'error update user',error:error.message})
