@@ -8,5 +8,5 @@ router.put('/updateUser/:id',updateUser )
 router.delete('/deleteUser/:id',deleteUser )
 router.post('/loginuser/login',loginUser )
 router.get('/getUsersByRole/role/:role',getUsersByRole )
-router.get('/getUsersByBranch/branch/:branchId',getUsersByBranch )
+router.get('/getUsersByBranch/branch/:branchId',getUsersByBranch ) 
 module.exports=router
